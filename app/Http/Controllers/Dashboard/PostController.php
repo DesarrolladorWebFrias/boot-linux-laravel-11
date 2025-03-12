@@ -16,20 +16,48 @@ class PostController extends Controller
     {
         //PARA INDICAR LA VISTA 
         //control shif tecla hacia abajo para rellenar
+//__________________________________________________________________________________________
+//_______CREAR UN REGISTRO 
+        // Post::create(
 
-        Post::create(
+        //     [
+        //         'title' => 'test title',
+        //         'slug' => 'test slug',
+        //         'descripcion' => 'test descripcion',
+        //         'category_id' => 1,
+        //         'content' => 'test title',
+        //         'image' => 'test image',
+        //         'posted' => 'not',
 
-            [
-                'title' => 'test title',
-                'slug' => 'test slug',
-                'descripcion' => 'test descripcion',
-                'category_id' => 1,
-                'content' => 'test title',
-                'image' => 'test image',
-                'posted' => 'not',
+        //     ]
+        // );
+        //_____________________________________________________________________________________
+//-----------------------------------------------------------------------------------------------        
+    //___ACTUALIZAR UN REGISTRO 
 
-            ]
-        );
+// SELECT * FROM WHERE ID=1
+//    $post = Post::find(1);
+
+  
+     
+//     $post->update(
+
+//         [
+//             'title' => 'test title new',
+//             'slug' => 'test slug',
+//             'descripcion' => 'test descripcion',
+            
+            
+
+//         ]
+ //);
+
+// ELIMINAR REGISTRO 
+//------------------------------------------------------------------------------------------------
+  $post = Post::find(3)->delete();
+  
+
+
 
         return 'index';
 
