@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 use App\Models\Post;
@@ -14,6 +15,14 @@ class PostController extends Controller
      */
     public function index()
     {
+
+        $post = Post::find(1);
+        $category =Category::find(1);
+
+        dd($category->posts[1]->title);
+
+
+
         //PARA INDICAR LA VISTA 
         //control shif tecla hacia abajo para rellenar
 //__________________________________________________________________________________________
@@ -54,8 +63,8 @@ class PostController extends Controller
 
 // ELIMINAR REGISTRO 
 //------------------------------------------------------------------------------------------------
-  $post = Post::find(3)->delete();
-  
+//   $post = Post::find(3)->delete();
+
 
 
 
